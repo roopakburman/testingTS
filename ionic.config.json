@@ -1,0 +1,7 @@
+{
+  "name": "russianroulette",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

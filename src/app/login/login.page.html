@@ -1,0 +1,23 @@
+<ion-content class="login-content" padding>
+  <ion-row>
+    <ion-col>
+      <h1 class="logo">Russian Roulette</h1>
+      <p class="description">Let's shoot some guns!</p>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button class="log-in-button" color="danger" expand="block" (click)="initiateLogin()">
+        LOG IN WITH GOOGLE
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-button class="log-in-button" color="primary" expand="block" (click)="initiateFireAuth()">
+        LOG IN WITH FIREBASE
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

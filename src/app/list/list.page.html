@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      List
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Russian Roulette</ion-card-subtitle>
+      <ion-card-title>{{whoFiresMessage}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{bulletStatus}} {{bulletChamber}}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-row>
+    <ion-col id="b6"></ion-col>
+    <ion-col id="b5"></ion-col>
+    <ion-col id="b4"></ion-col>
+    <ion-col id="b3"></ion-col>
+    <ion-col id="b2"></ion-col>
+    <ion-col id="b1"></ion-col>
+    <!-- <div id="b6" class="col"></div> -->
+    <!-- <div id="b5" class="col"></div>
+  <div id="b4" class="col"></div>
+  <div id="b3" class="col"></div>
+  <div id="b2" class="col"></div>
+  <div id="b1" class="col"></div> -->
+  </ion-row>
+  <div class="row col-50">
+    <!-- <div class="col"><span class="badge badge-assertive">0</span></div> -->
+
+
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button color="primary" (click)="play()" [hidden]="playButton"> Let's Play </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="danger" (click)="shoot()" [hidden]="shootButton" [disabled]="!whoFiresShot"> Shoot
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        User Score: {{userScore}}
+      </ion-col>
+      <ion-col>
+        Comp Score: {{compScore}}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        User High Score: {{userHighScore}}
+      </ion-col>
+      <ion-col>
+        <!-- Comp Score: {{compScore}} -->
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <!-- <ion-list>
+    <ion-item *ngFor="let item of items">
+      <ion-icon [name]="item.icon" slot="start"></ion-icon>
+      {{item.title}}
+      <div class="item-note" slot="end">
+        {{item.note}}
+      </div>
+    </ion-item>
+  </ion-list> -->
+  <!--
+    <div *ngIf="selectedItem" padding>
+      You navigated here from <b>{{selectedItem.title }}</b>
+    </div>
+  -->
+  <audio id="gClick" src="../../assets/audio/blank.mp3" preload="auto"></audio>
+  <audio id="gBang" src="../../assets/audio/shotFired.mp3" preload="auto"></audio>
+  <audio id="gReload" src="../../assets/audio/reload.mp3" preload="auto"></audio>
+  <audio id="gShellFalling" src="../../assets/audio/shellFalling.mp3" preload="auto"></audio>
+</ion-content>
